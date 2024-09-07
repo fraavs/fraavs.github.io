@@ -641,13 +641,20 @@ footer {
     }
 }
 
+#projects .container .row {
+    display: flex!important;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 .project {
     position: relative;
-    max-width: 900px;
+    width: 45%;
     margin: 0 auto 30px auto;
     overflow: hidden;
     background: #fff;
     border-radius: 4px;
+    margin-bottom: 40px;
 }
 
 .project-image {
