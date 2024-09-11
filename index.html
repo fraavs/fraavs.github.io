@@ -54,7 +54,7 @@
             <h1>Yassine Benchekroun</h1>
             <h2>Python | AI Engineer</h2>
             <h2>Full Stack Developer</h2>
-            <a href="./Yassine_Resume.pdf" target="_blank" class="btn-rounded-white">Download Resume</a>
+            <a href="./Upwork_Yassine_Resume_No1.pdf" target="_blank" class="btn-rounded-white">Download Resume</a>
         </div>
         <!-- End #lead-content -->
 
@@ -182,68 +182,73 @@
             <div class="row">
                 <div class="project shadow-large">
                     <div class="project-image">
-                        <img src="images/project.jpg" />
+                        <img src="images/project1.png" Class="myImage" />
                     </div>
                     <!-- End .project-image -->
                     <div class="project-info">
-                        <h3>Project Name Here</h3>
+                        <h3>Intelligent trading bot</h3>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam
-                            volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce
-                            eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+                            The project is aimed at developing an intelligent trading bot for automated trading
+                            cryptocurrencies using state-of-the-art machine learning (ML) algorithms and feature
+                            engineering.
                         </p>
-                        <a href="#">View Project</a>
+                        <a href="https://t.me/intelligent_trading_signals" target="_blank">View Telegram</a>
                     </div>
                     <!-- End .project-info -->
                 </div>
 
                 <div class="project shadow-large">
                     <div class="project-image">
-                        <img src="images/project.jpg" />
+                        <img src="images/project2.png" Class="myImage" />
                     </div>
                     <!-- End .project-image -->
                     <div class="project-info">
-                        <h3>Project Name Here</h3>
+                        <h3>Motorola Next.js E-commerce Platform</h3>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam
-                            volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce
-                            eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+                            As a full-stack developer, I was responsible for building a comprehensive e-commerce
+                            platform for Motorola using Next.js, a popular React framework. The primary goal of this
+                            project was to create a fast, responsive, and user-friendly online shopping experience that
+                            would drive increased sales and customer engagement for Motorola's diverse product line.
                         </p>
-                        <a href="#">View Project</a>
+                        <a href="https://motorola.com/" target="_blank">View Site</a>
                     </div>
                     <!-- End .project-info -->
                 </div>
 
                 <div class="project shadow-large">
                     <div class="project-image">
-                        <img src="images/project.jpg" />
+                        <img src="images/project3.png" Class="myImage" />
                     </div>
                     <!-- End .project-image -->
                     <div class="project-info">
-                        <h3>Project Name Here</h3>
+                        <h3>MYOB Business API Integration Platform</h3>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam
-                            volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce
-                            eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+                            As a Django developer, I was tasked with creating a comprehensive integration platform that
+                            allows businesses to seamlessly connect their MYOB Business accounting software with various
+                            third-party applications and services. The goal of this project was to provide a
+                            user-friendly and scalable solution that simplifies the integration process, enabling
+                            businesses to maximize the value of their MYOB data and streamline their operations.
                         </p>
-                        <a href="#">View Project</a>
+                        <a href="https://developer.myob.com/" target="_blank">View Site</a>
                     </div>
                     <!-- End .project-info -->
                 </div>
 
                 <div class="project shadow-large">
                     <div class="project-image">
-                        <img src="images/project.jpg" />
+                        <img src="images/project4.png" Class="myImage" />
+
                     </div>
                     <!-- End .project-image -->
                     <div class="project-info">
-                        <h3>Project Name Here</h3>
+                        <h3>WebWave Community Platform</h3>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam
-                            volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce
-                            eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+                            The impact of this project has been significant. The WebWave Community Platform has
+                            successfully fostered a thriving and engaged user community, leading to increased product
+                            adoption, improved user satisfaction, and a more responsive and user-centric development
+                            process.
                         </p>
-                        <a href="#">View Project</a>
+                        <a href="https://webwaveme.userecho.com/" target="_blank">View Site</a>
                     </div>
                     <!-- End .project-info -->
                 </div>
@@ -253,6 +258,11 @@
         </div>
     </div>
     <!-- End #projects -->
+
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
 
     <div id="skills">
         <h2 class="heading">Skills</h2>
@@ -351,6 +361,39 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/scripts.min.js"></script>
     <script src="js/portfolio.js"></script>
+    <script>
+        var modal = document.getElementById("myModal");
+        var modalImg = document.getElementById("img01");
+        var span = document.getElementsByClassName("close")[0];
+
+        // Get all images with the class 'myImage'
+        var images = document.getElementsByClassName("myImage");
+
+        // Add click event to each image
+        for (var i = 0; i < images.length; i++) {
+            images[i].onclick = function () {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+            }
+        }
+
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // Close modal on ESC key press
+        window.onkeydown = function (event) {
+            if (event.key === "Escape") {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </body>
 
 </html>
